@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tip Calculator</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <!-- Values entered by the user-->
+
+      <div id="input">
+        <div class="inputDiv">
+          <label for="bill">Bill</label>
+          <input type="number" name="bill" id="bill" placeholder="₹" />
+        </div>
+
+        <div class="inputDiv tipDiv">
+          <label for="tipBtn">Select Tip %</label>
+          <button class="tipBtn">5%</button>
+          <button class="tipBtn">10%</button>
+          <button class="tipBtn">15%</button>
+          <button class="tipBtn">25%</button>
+          <button class="tipBtn">50%</button>
+          <button class="tipBtn">Custom</button>
+        </div>
+
+        <div class="inputDiv">
+          <label for="people">Number of People</label>
+          <input type="number" name="people" id="people" placeholder="" />
+        </div>
+      </div>
+
+      <!-- Values shown to the user-->
+
+      <div id="output">
+        <div>
+          <p>
+            Tip Amount <br />
+            / person <span id="personTip" class="tipOutput">₹0.00</span>
+          </p>
+        </div>
+
+        <div>
+          <p>Total Tip <span id="totalTip" class="tipOutput">₹0.00</span></p>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
