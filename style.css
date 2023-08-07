@@ -1,0 +1,68 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  align-items: center;
+  font-family: "Courier New", Courier, monospace;
+}
+
+body {
+  background: #c5e4e7;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  background: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  border: none;
+  border-radius: 1rem;
+  box-shadow: 0 12px 25px #7cc7c9;
+  padding: 2rem;
+  flex-wrap: wrap;
+  width: 50rem;
+}
+
+#input {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 25rem;
+  width: 20rem;
+}
+
+.inputDiv {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 1rem;
+}
+
+.tipDiv > button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+
+#output {
+  background: #00474a;
+  width: 20rem;
+  height: 25rem;
+  border-radius: 1rem;
+}
+
+#output > div > p {
+  color: #ffffff;
+}
+
+.tipOutput {
+  color: #2dbdaa;
+}
