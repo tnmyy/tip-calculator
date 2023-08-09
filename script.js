@@ -5,23 +5,57 @@ console.log(`Tip calculator web app`);
 const bill = document.getElementById("bill");
 const people = document.getElementById("people");
 
-// Output Variables
+// tip Variables
 
 const personTip = document.getElementById("personTip");
 const totalTip = document.getElementById("totalTip");
 
 // Calculating Tip
 
-const output = () => {
-  console.log(1);
+let selectedTipText;
+const tip = () => {
+  selectedTipText = document.querySelector(".selectedTip");
+  console.log(selectedTipText.textContent);
+
+  if (selectedTipText) {
+    selectedTipText = selectedTipText.textContent;
+    selectedTipText = Number.parseFloat(selectedTipText);
+    console.log(selectedTipText);
+  } else {
+    console.log(`No tip selected`);
+  }
 };
+
+// Evaluating Tip
+
+let totalTipOutput;
+let personTipOutput;
+
+const output = () => {
+  totalTipOutput = ((selectedTipText / 100) * bill.value).toFixed(2);
+  console.log(totalTipOutput);
+
+  personTipOutput = (totalTipOutput / people.value).toFixed(2);
+  console.log(personTipOutput);
+};
+
+bill.addEventListener("input", () => {
+  output();
+  totalTip.innerHTML = totalTipOutput;
+});
+people.addEventListener("input", () => {
+  output();
+  personTip.innerHTML = personTipOutput;
+});
+
 // Configuring Tip Percentage
 
 const tipBtn = document.querySelectorAll(".tipBtn");
+let selectedTip;
 
 tipBtn.forEach((btn) => {
   btn.addEventListener("click", () => {
-    btn.classList.toggle("selectedTip");
-    output();
+    selectedTip = btn.classList.toggle("selectedTip");
+    tip();
   });
 });
