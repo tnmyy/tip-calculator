@@ -4,6 +4,7 @@
   box-sizing: border-box;
   align-items: center;
   font-family: "Courier New", Courier, monospace;
+  font-size: 1.1rem;
 }
 
 body {
@@ -31,7 +32,7 @@ body {
 #input {
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   flex-direction: column;
   height: 25rem;
   width: 20rem;
@@ -40,16 +41,47 @@ body {
 .inputDiv {
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   flex-direction: column;
   margin: 1rem;
 }
 
-.tipDiv > button {
+.inputDiv > label {
+  padding: 0.3rem 0;
+}
+
+.inputDiv > input {
+  border: none;
+  background: #ecf2f4;
+  margin: 1rem 0;
+  padding: 0.3rem;
+  border-radius: 0.3rem;
+}
+
+.tipDiv {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: row;
+  flex-wrap: wrap;
+  padding: 0.3rem 0;
+}
+
+.tipBtn {
+  padding: 0.4rem 0.3rem;
+  margin: 0.4rem;
+  width: 5.1rem;
+  background: #00474a;
+  color: #ffffff;
+  font-weight: bolder;
+  border: none;
+  border-radius: 0.3rem;
+  cursor: pointer;
+}
+
+.tipBtn:nth-child(1),
+.tipBtn:nth-child(4) {
+  margin-left: 0;
 }
 
 #output {
@@ -59,10 +91,26 @@ body {
   border-radius: 1rem;
 }
 
-#output > div > p {
+.outputDiv > div > p {
   color: #ffffff;
 }
 
 .tipOutput {
   color: #2dbdaa;
+  font-size: 2.3rem;
+  padding: 0 2rem;
+  font-weight: bolder;
+}
+
+.outputDiv {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.outputDiv > div > p {
+  line-height: 1;
+  font-size: 1.2rem;
+  padding: 4rem 0;
 }
